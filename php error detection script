@@ -1,0 +1,10 @@
+// Note: You have to insert the below lines of code at the top of your php script that you want to check the errors in. 
+
+// it's PHP7 specific, fails fast, this file only 
+ declare(strict_types=1); 
+// this file and all included/required files
+    error_reporting(-1); 
+    ini_set('display_errors', 'true');
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    
+    // your remaining script goes here...
